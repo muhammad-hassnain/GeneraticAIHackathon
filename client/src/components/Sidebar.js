@@ -6,32 +6,45 @@ function AppSidebar() {
       <div className="min-h-screen flex flex-row bg-teal-600">
         <div className="flex flex-col w-56 bg-skyblue rounded-r-3xl overflow-hidden">
           <ul className="flex flex-col py-4">
-            <li>
-              <a href="#" className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+          <li>
+              <a href="/" className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
                 <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i className="bx bx-home"></i></span>
-                <span className="text-sm font-medium font-bold text-white">View My Images</span>
+                <span className="text-sm font-medium font-bold text-white">Home</span>
               </a>
             </li>
             <li>
-              <a href="#" className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+              <a href="/createDesign" className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+                <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i className="bx bx-home"></i></span>
+                <span className="text-sm font-medium font-bold text-white">Create a Design</span>
+              </a>
+            </li>
+            <li>
+              <a href="/myDesigns" className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+                <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i className="bx bx-home"></i></span>
+                <span className="text-sm font-medium font-bold text-white">View My Designs</span>
+              </a>
+            </li>
+            <li>
+              <a href="/allDesigns" className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
                 <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i className="bx bx-music"></i></span>
-                <span className="text-sm font-medium font-bold text-white">View All Images</span>
+                <span className="text-sm font-medium font-bold text-white">View All Designs</span>
               </a>
             </li>
             <li>
-              <a href="#" className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
-                <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i className="bx bx-drink"></i></span>
-                <span className="text-sm font-medium font-bold text-white">View All Transactions</span>
+              <a href="/getSuggestions" className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+                <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400"><i className="bx bx-home"></i></span>
+                <span className="text-sm font-medium font-bold text-white">Get Suggestions</span>
               </a>
             </li>
-          </ul>
+            
+           </ul>
         </div>
       </div>
     </div>
   );
 }
 
-function Sidebar() {
+function Sidebar({pageName}) {
   const [showAppSidebar, setShowAppSidebar] = React.useState(false);
 
   return (
@@ -47,7 +60,7 @@ function Sidebar() {
         </button>
 
         <div className="flex-1 flex items-center justify-center">
-          <h1 className="text-3xl text-white font-bold py-2">App Name</h1>
+          <h1 className="text-3xl text-white font-bold py-2">{pageName}</h1>
         </div>
       </div>
 
