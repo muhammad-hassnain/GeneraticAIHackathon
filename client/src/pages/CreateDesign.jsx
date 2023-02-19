@@ -25,7 +25,7 @@ function CreateDesign() {
     "Search Bears with Paint Brushes the Starry Night, painted by Vincent Van Gogh.."
   );
   const configuration = new Configuration({
-    apiKey: "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",
+    apiKey: "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",
   });
   const fileInputRef = useRef();
 
